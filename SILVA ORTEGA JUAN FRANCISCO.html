@@ -1,0 +1,38 @@
+<script>
+    function areaCirculo(){
+        var area=PI*radio*radio;
+        return(area);
+    }
+    function areaTriangulo(){
+        var area=base*altura/2;
+        return(area);
+    }
+    function areaCuadrado(){
+        var area=lado*lado;
+        return(area);
+    }
+    var PI=3.14, lado,radio,altura,num;
+    do{
+        num=prompt("1) para calcular area del circulo 2) para calcular area del triangulo 3)calcular are del cuadrado");
+        num=Number(num)
+        switch (num){
+            case 1:
+            radio=prompt("ingrese el radio del circulo");
+            alert(areaCirculo());
+            break;
+            case 2:
+            base=prompt("ingresar base del triangulo");
+            altura=prompt("ingrese altura del tirangulo")
+            alert(areaTriangulo())
+            break;
+            case 3: 
+            lado=prompt("ingrese lado del cuadrado");
+            alert(areaCuadrado())
+            break;
+            case 4:
+            alert("salio de la programaicon");
+            default:
+            break;
+        }
+    }while(num>0&&num<4||num<0||num>4);
+</script>   

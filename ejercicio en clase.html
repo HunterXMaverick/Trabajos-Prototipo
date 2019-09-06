@@ -1,0 +1,33 @@
+<script>
+    var alumnos = ["Nombre sin especificar", "Nombre sin especificar", "Nombre sin especificar", "Nombre sin especificar", "Nombre sin especificar"];
+    var notas = ["Nota sin especificar", "Nota sin especificar", "Nota sin especificar", "Nota sin especificar", "Nota sin especificar"];
+    var eleccion;
+    var nombre;
+    var nota;
+    var imprime;
+    do{
+    eleccion= prompt("Realice su elecci\u00F3n\n1.-Ingresar Nombre De Alumnos\n2.-Ingresar nota de Alumnos\n3.-Ver Los Datos\n4.-Salir Del Programa");
+    eleccion= Number (eleccion);
+    switch (eleccion) {
+        case 1: alumnos[0] = prompt("1º Ingrese El Nombre Completo de su Primer Alumno");
+            alumnos[1] = prompt("2º Ingrese El Nombre Completo de su Segundo Alumno");
+            alumnos[2] = prompt("3º Ingrese El Nombre Completo de su Tercer Alumno");
+            alumnos[3] = prompt("4º Ingrese El Nombre Completo de su Cuarto Alumno");
+            alumnos[4] = prompt("5º Ingrese El Nombre Completo de su Quinto Alumno");
+            break;
+        case 2: notas[0] = prompt("Ingrese la nota de\n" + (alumnos[0]));
+            notas[1] = prompt("Ingrese la nota de\n" + (alumnos[1]));
+            notas[2] = prompt("Ingrese la nota de\n" + (alumnos[2]));
+            notas[3] = prompt("Ingrese la nota de\n" + (alumnos[3]));
+            notas[4] = prompt("Ingrese la nota de\n" + (alumnos[4]));
+            break;
+        case 3: alert("1.-El Alumno:\n" + alumnos[0] + "\nNota de:\n" + notas[0] + "\n" + "\n2.-El Alumno:\n" + alumnos[1] + "\nNota de:\n" + notas[1] + "\n\n3.-El Alumno:\n" + alumnos[2] + "\nNota de:\n" + notas[2] + "\n\n4.-El Alumno:\n" + alumnos[3] + "\nNota de:\n" + notas[3] + "\n\n5.-El Alumno:\n" + alumnos[4] + "\nNota de:\n" + notas[4]);
+            break;
+            case 4:alert ("A Salido Del Programa");
+            break;
+        default: alert ("El Dato Ingresado Es Inv\u00E1lido");
+        break;
+    }
+    } while (eleccion != 4);
+    alert("Programa Hecho por Bryan Cortez");
+</script>

@@ -1,0 +1,60 @@
+<script>
+    function controlador(resrevado) {
+        if (resrevado > 20 || reservado < 1) {
+            alert("ERROR");
+        } else {
+            asientosDisponibles[reservado - 1] = asientoOcupados;
+            contar=contar-1;
+        }
+
+    }
+    function imrpimirOcupados(){
+        for (lugar = 0; lugar <= 20; lugar++) {
+                    if (asientosDisponibles[lugar] == asientoOcupados) {
+                        alert("EL ASIENTO " + (lugar + 1) + asientosDisponibles[lugar]);
+                    }
+                } 
+    }
+    var contador1=0;
+    var contar=20
+    var inicio;
+    var menu;
+    var reservado;
+    var lugar;
+    var asientoDisponible = " DISPONIBLE";
+    var asientoOcupados = " OCUPADO";
+    var asientosDisponibles = [];
+    for (var inicio = 0; inicio < 20; inicio++) {
+        asientosDisponibles[inicio] = asientoDisponible;
+    }
+    do {
+
+        menu = parseInt(prompt( contar+  "SISTEMA DE RESERVA DE ASIENTOS \n1. RESERVAR ASIENTOS \n2. ASIENTOS DISPONIBLES \n3. ASIENTOS RESERVADOS \n4. TODOS LOS ASIENTOS \n5. SALIDA"));
+        switch (menu) {
+            case 1:
+                reservado = parseInt(prompt("ASIGNAR ASIENTO DE RESERVA: "));
+                controlador(reservado);
+                break;
+            case 2:
+                for (var lugar = 0; lugar <= 20; lugar++) {
+                    if (asientosDisponibles[lugar] == asientoDisponible) {
+                        alert("EL ASIENTO " + (lugar + 1) + asientosDisponibles[lugar]);
+                    }
+                }
+
+                break;
+            case 3:
+                
+            imrpimirOcupados();
+                break;
+            case 4:
+                for (lugar = 0; lugar <= asientosDisponibles.length; lugar++) {
+                    alert("EL ASIENTO " + (lugar + 1) + asientosDisponibles[lugar]);
+                }
+                break;
+        }
+    }
+    while (menu != 5) {
+        alert("GRACIAS POR PARTICIPAR");
+    }
+</script>

@@ -1,0 +1,29 @@
+<script>
+    var txt1, txt2, c = 0;
+    mat1 = new Array(2);
+    for (var i = 0; i < 2; i++)
+        mat1[i] = new Array(40);
+    for (var i = 0; i < 2; i++)
+        for (var j = 0; j < 40; j++)
+            mat1[i][j] = 0;
+    while (c <= 80) {
+        txt1 = parent(prompt("favor ingresar el numero de fila[1,2]:"));
+        txt2 = parent(prompt("favor ingresar el numero de columna [1-40]:"));
+        if ((txt1 > 0 && txt1 <= 2) && (txt2 > 0 && txt2 <= 40)) {
+            if (mat1[(txt1 - 1)][(txt2 - 1)] == 0) {
+                mat1[(txt1 - 1)][(txt2 - 1)] = 1;
+                c = c + 1
+                console.log("reserva exitosa!!\n\n");
+            } else {
+                console.log("\nasiento ocupaod\n\n");
+            }
+        } else {
+            console.log("favor ingresar un valor de asientos valido.\n");
+        }
+    }
+    for (var i = 0; i < 2; i++) {
+        for (var j = 0; j < 40; j++) {
+            console.log(mat1[i][j], "\t")
+        }
+    }
+</script>

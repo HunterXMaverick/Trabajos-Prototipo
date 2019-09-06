@@ -1,0 +1,25 @@
+<script>
+    var alutra = 0, base = 0, calcular = 0, radio = 0, lado = 0;
+    const PI = 3.14;
+    calcular = prompt("ingrese el area deseada del \n1.triangulo \n2.cuadrado \n3.circulo");
+    switch (calcular) {
+        case "1":
+            base = prompt("ingrese la base");
+            alutra = prompt("ingrese la altura");
+            area = (base * altura) / 2;
+            alert("el area del triangulo es:" + area);
+            break;
+        case "2":
+            lado = prompt("ingrese el valor de un lado");
+            area = (lado * lado);
+            alert("ingrese el area del cuadrado:" + area);
+            break;
+        case "3":
+            radio = prompt("ingrese el valor del radio");
+            area = PI * (radio * radio);
+            alert("el area del circulo:" + area);
+            break;
+        default: alert("el valor no pertenece al calculo");
+            break;
+    }
+</script>   
